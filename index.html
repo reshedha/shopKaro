@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>shopKaro</title>
+  <link rel="stylesheet" href="styles.css" >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <h2>shopKaro</h2>
+    <div>
+      <button onclick="showHome()">Home</button>
+      <button onclick="showCart()">Cart</button>
+      <button onclick="showOrders()">My Orders</button>
+    </div>
+  </div>
+
+  <!-- HOME -->
+  <div id="home" class="page visible">
+    <div class="categories">
+      <button onclick="loadProducts('women')">Women</button>
+      <button onclick="loadProducts('men')">Men</button>
+      <button onclick="loadProducts('kids')">Kids</button>
+      <button onclick="loadProducts('home')">Home Appliances</button>
+    </div>
+    <div class="products" id="products"></div>
+  </div>
+
+  <!-- CART -->
+  <div id="cart" class="page">
+    <h2>Your Cart</h2>
+    <div id="cartItems"></div>
+    <div class="total" id="totalPrice"></div>
+    <button onclick="placeOrder()">Place Order</button>
+  </div>
+
+  <!-- ORDERS -->
+  <div id="orders" class="page">
+    <h2>My Orders</h2>
+    <div id="orderItems"></div>
+  </div>
+  <script src="script.js" ></script>
+</body>
+</html>
